@@ -17,7 +17,7 @@ const UpdatePost = () => {
 
   // This URL returns an array of posts previews
   const { data, err, loading } = usePostData(
-    `${import.meta.env.VITE_API_URL}/posts/${params.postId}`
+    `${import.meta.env.API_URL}/posts/${params.postId}`
   );
 
   if (error) {

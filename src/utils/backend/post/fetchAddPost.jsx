@@ -1,5 +1,5 @@
 const fetchAddPost = async (formData, userToken) => {
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/posts`, {
+  const response = await fetch(`${import.meta.env.API_URL}/posts`, {
     mode: "cors",
     method: "POST",
     body: formData,

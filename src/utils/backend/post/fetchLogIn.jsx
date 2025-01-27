@@ -1,5 +1,5 @@
 const fetchLogIn = async (userInfo) => {
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/logIn`, {
+  const response = await fetch(`${import.meta.env.API_URL}/logIn`, {
     mode: "cors",
     method: "POST",
     body: JSON.stringify(userInfo),

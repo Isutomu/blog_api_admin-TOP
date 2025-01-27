@@ -5,7 +5,7 @@ import styles from "./PostsCardsWrapper.module.css";
 function PostsCardsWrapper() {
   // This URL returns an array of posts previews
   const { data, error, loading } = usePostData(
-    `${import.meta.env.VITE_API_URL}/posts`
+    `${import.meta.env.API_URL}/posts`
   );
 
   if (error) {
