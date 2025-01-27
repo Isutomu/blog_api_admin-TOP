@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function TextEditor({ contentRef, initialText }) {
   return (
     <Editor
-      apiKey={process.env.API_TINY_MCE}
+      apiKey={import.meta.env.VITE_API_TINY_MCE}
       onInit={(_evt, editor) => (contentRef.current = editor)}
       initialValue={initialText}
       init={{
