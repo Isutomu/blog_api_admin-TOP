@@ -13,6 +13,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
+    strategy:
+      matrix:
+        node-version: [20.x]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
