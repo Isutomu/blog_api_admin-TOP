@@ -4,9 +4,7 @@ import styles from "./PostsCardsWrapper.module.css";
 
 function PostsCardsWrapper() {
   // This URL returns an array of posts previews
-  const { data, error, loading } = usePostData(
-    `${import.meta.env.API_URL}/posts`
-  );
+  const { data, error, loading } = usePostData(`${process.env.API_URL}/posts`);
 
   if (error) {
     return <span>{error.message}</span>;

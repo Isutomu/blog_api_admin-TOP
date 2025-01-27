@@ -1,5 +1,5 @@
 const fetchUpdatePost = async (formData, userToken, postId) => {
-  const response = await fetch(`${import.meta.env.API_URL}/posts/${postId}`, {
+  const response = await fetch(`${process.env.API_URL}/posts/${postId}`, {
     mode: "cors",
     method: "PATCH",
     body: formData,
