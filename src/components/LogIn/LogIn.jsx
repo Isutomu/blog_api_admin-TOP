@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import fetchLogIn from "../../utils/backend/post/fetchLogIn";
 import styles from "./LogIn.module.css";
+import isLogged from "../../utils/auth/isLogged";
 
 const LogIn = () => {
   const [username, setUsername] = useState("");
@@ -9,7 +10,7 @@ const LogIn = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  if (localStorage.getItem("token")) {
+  if (isLogged()) {
     return <Navigate to="/dashboard" />;
   }
 
@@ -25,7 +26,12 @@ const LogIn = () => {
       return;
     }
 
+    const expirationInMlSeconds = response.expires * 1000;
+    const timeNowInMlSeconds = new Date().getTime();
+    const expires = new Date(timeNowInMlSeconds + expirationInMlSeconds);
     localStorage.setItem("token", response.token);
+    localStorage.setItem("expires", expires);
+
     navigate("/dashboard");
   };
 
