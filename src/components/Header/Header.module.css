@@ -40,6 +40,15 @@
   margin-right: 0;
 }
 
+.rightDiv {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 700px) {
   .header {
     padding: 0 var(--padding-lateral-sm);
