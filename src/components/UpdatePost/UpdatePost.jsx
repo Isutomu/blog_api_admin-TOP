@@ -69,6 +69,9 @@ const UpdatePost = () => {
             className={styles.input}
             defaultValue={titleRef.current}
             onChange={({ target }) => (titleRef.current = target.value)}
+            required={true}
+            minLength={3}
+            maxLength={45}
           />
         </div>
         <div className={styles.field}>
@@ -81,6 +84,8 @@ const UpdatePost = () => {
             className={styles.input}
             defaultValue={imageRef.current}
             onChange={({ target }) => (imageRef.current = target.value)}
+            required={true}
+            minLength={20}
           />
         </div>
         <div className={styles.field}>
@@ -93,6 +98,8 @@ const UpdatePost = () => {
             className={styles.input}
             defaultValue={tagsRef.current}
             onChange={({ target }) => (tagsRef.current = target.value)}
+            required={true}
+            minLength={3}
           />
         </div>
         <div className={styles.field}>

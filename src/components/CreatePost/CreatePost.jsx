@@ -38,19 +38,38 @@ const CreatePost = () => {
           <label htmlFor="title" className={styles.label}>
             Title
           </label>
-          <input type="text" name="title" className={styles.input} />
+          <input
+            type="text"
+            name="title"
+            className={styles.input}
+            required={true}
+            minLength={3}
+            maxLength={45}
+          />
         </div>
         <div className={styles.field}>
           <label htmlFor="image" className={styles.label}>
             Image (url)
           </label>
-          <input type="text" name="image" className={styles.input} />
+          <input
+            type="text"
+            name="image"
+            className={styles.input}
+            required={true}
+            minLength={20}
+          />
         </div>
         <div className={styles.field}>
           <label htmlFor="tags" className={styles.label}>
             Tags
           </label>
-          <input type="text" name="tags" className={styles.input} />
+          <input
+            type="text"
+            name="tags"
+            className={styles.input}
+            required={true}
+            minLength={3}
+          />
         </div>
         <div className={styles.field}>
           <label htmlFor="content" className={styles.label}>

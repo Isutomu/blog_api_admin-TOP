@@ -50,6 +50,9 @@ const LogIn = () => {
             value={username}
             onChange={handleUsernameChange}
             className={styles.input}
+            required={true}
+            minLength={3}
+            maxLength={25}
           />
         </div>
         <div className={styles.field}>
@@ -57,11 +60,14 @@ const LogIn = () => {
             Password
           </label>
           <input
-            type="text"
+            type="password"
             id="password"
             value={password}
             onChange={handlePasswordChange}
             className={styles.input}
+            required={true}
+            minLength={3}
+            maxLength={20}
           />
         </div>
         <button className={styles.button}>Log in</button>

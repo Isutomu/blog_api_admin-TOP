@@ -67,8 +67,16 @@
   font-size: var(--text-base);
 }
 
-.input:focus {
-  border-color: var(--faded);
+.input:valid {
+  border-color: rgba(14, 172, 43, 0.8);
+}
+
+.input:invalid {
+  border-color: rgba(255, 56, 119, 0.8);
+}
+
+.input[value=""] {
+  border-color: rgba(151, 151, 151, 0.8);
 }
 
 .button {
